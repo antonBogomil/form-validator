@@ -1,0 +1,11 @@
+{
+  "users" : [
+    {
+      "login": "admin"
+    },
+    {
+      "login": "user"
+    }
+
+  ]
+}

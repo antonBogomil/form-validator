@@ -1,0 +1,219 @@
+@font-face
+  font-family: 'latoMedium'
+  src: url('../font/Lato-Medium.ttf')
+$color-warning : #ff3333
+$color-success : #39a05b
+
+body
+  min-width: 320px
+  max-width: 3000px
+*
+  margin: 0
+  padding: 0
+  font-family: latoMedium
+
+.clearfix:before
+  content: ""
+  clear: both
+  display: table
+a
+  display: block
+.wrapper
+  background-color: #e0e0e0
+  position: fixed
+  width: 100%
+  height: 100%
+  form
+    background-color: #fff
+    position: absolute
+    max-width: 480px
+    margin: auto
+    display: inline-block
+    height: auto
+    max-height: 565px
+    padding: 75px 4% 4%
+    border-radius: 6px
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    box-sizing: border-box
+    label:not(:last-of-type)
+      position: relative
+      width: auto
+      display: block
+      border-radius: 6px
+      margin-bottom: 30px
+      box-sizing: border-box
+      input:not([type=checkbox])
+        padding-left: 15px
+        width: 100%
+        height: 70px
+        display: block
+        box-sizing: border-box
+        font-size: 24px
+        border-radius: 6px
+        border: 1px solid #9c9c9c
+        background-repeat: no-repeat
+        background-size: auto auto
+        background-position: 96% 50%
+        color: #9c9c9c
+        outline: none
+        padding-right: 40px
+        &::placeholder
+          color: #9c9c9c
+          opacity: 0.75
+
+        &:hover
+          border-color: black
+        &:focus
+          border-color: black
+        &:active
+          border-color: black
+          input
+            transition: font-size 0.5s ease
+            font-size: 26px
+    .label-login
+      input
+        background-image: url("../img/login.jpg")
+    .label-password
+      input
+        color: $color-warning
+        background-image: none!important
+        &::placeholder
+
+
+.label-remember
+  cursor: pointer
+  display: inline-block
+  input
+    display: none
+  span
+    line-height: 20px
+    padding-left: 35px
+    position: relative
+    display: inline-block
+    color: #9c9c9c
+  span:after
+    content: ""
+    left: 0
+    position: absolute
+    display: inline-block
+    width: 20px
+    height: 20px
+    box-sizing: border-box
+    border: 1px solid #9c9c9c
+    float: left
+    border-radius: 2px
+    z-index: 0
+    transition: all 0.3s ease
+  span:before
+
+    content: ""
+    left: 4px
+    top: 4px
+    position: absolute
+    width: 14px
+    height: 6px
+    transform: rotate(-45deg)
+    box-sizing: border-box
+    border-bottom: 2px solid white
+    border-left: 2px solid white
+    float: left
+    border-radius: 2px
+    display: none
+    z-index: 1
+  input[type=checkbox]:checked+span:after
+    background-color: $color-success
+    border-color: $color-success
+  input[type=checkbox]:checked+span:before
+    border-color: white
+    display: block
+.forgot
+  float: right
+  display: inline-block
+  border-bottom: 1px solid #000
+  cursor: pointer
+.btn
+  margin-top: 20px
+  display: block
+  width: 100%
+  height: 72px
+  box-sizing: border-box
+  font-size: 18px
+  text-align: center
+  text-decoration: none
+  cursor: pointer
+  padding: 24px  0
+  border: 1px solid #9c9c9c
+  border-radius: 6px
+  outline: none
+  transition: all 0.3s ease
+.btn:hover
+  background-color: $color-success
+  color: #ffffff
+.submit
+  background-color: #3594cc
+  color: #fff
+  font-size: 24px
+  border: none
+  &:hover
+    background-color: rgba(53, 148, 204, 0.81)
+label.invalid
+  input
+    border-top-right-radius: 0!important
+    border-color: $color-warning!important
+  .error-block
+    display: block
+    opacity: 1
+label.valid
+  input
+    background-image: url("../img/valid.png")!important
+    border-color: $color-success!important
+.error-block
+  opacity: 0
+  position: absolute
+  right: 0
+  transition: all 0.3s ease
+  top: -35px
+  box-sizing: border-box
+  height: 35px
+  color: #fff
+  padding: 10px 25px
+  border-top-right-radius: 6px
+  border-top-left-radius: 6px
+  background-color: $color-warning
+.show-password
+  position: absolute
+  width: 30px
+  right: 10px
+  top: 0
+  background-repeat: no-repeat
+  background-position: center
+  height: 100%
+  background-image: url("../img/pass.jpg")
+  cursor: pointer
+  z-index: 2
+.invalid
+  input
+    color: $color-warning!important
+  .show-password
+    background-image: url("../img/invalid.png")
+.valid
+  input
+      color: $color-success!important
+  .show-password
+    background-image: url("../img/valid.png")
+.wrapper
+  .sign-up-form
+    padding-top: 30px
+    label:not(:last-of-type)
+      margin-bottom: 20px
+      input:not([type=checkbox])
+        height: 50px
+    .label-mail
+      input
+        background-image: url("../img/email.png")
+        background-size: 20px 20px!important
+
+
